@@ -60,7 +60,7 @@ static NSString *const playbackRate = @"rate";
     _pendingSeek = false;
     _pendingSeekTime = 0.0f;
     _lastSeekTime = 0.0f;
-    _progressUpdateInterval = 250;
+    _progressUpdateInterval = 30;
     _controls = NO;
     _playerBufferEmpty = YES;
     _playInBackground = false;
@@ -117,7 +117,7 @@ static NSString *const playbackRate = @"rate";
     {
         return [playerItem seekableTimeRanges].firstObject.CMTimeRangeValue;
     }
-    
+
     return (kCMTimeRangeZero);
 }
 
